@@ -11,13 +11,19 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 #from webbrowser import Chrome
 
+manager = ChromeDriverManager()
+manager.install()
+
 
 
 def scrape_all():
+
     # Initiate headless driver for deployment
+
     executable_path = {'executable_path': ChromeDriverManager().install()}
     browser = Browser('chrome', **executable_path, headless=True)
 
+    # Set variables for mars_news
     news_title, news_paragraph = mars_news(browser)
 
     # Run all scraping functions and store results in dictionary
