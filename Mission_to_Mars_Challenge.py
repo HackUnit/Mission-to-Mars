@@ -218,8 +218,8 @@ browser.is_element_present_by_css("ul.item_list li.slide", wait_time=1)
 hemisphere_image_urls = []
 # 3. Write code to retrieve the image urls and titles for each hemisphere.
 html = browser.html
-hemi_soup = soup(html, 'html.parser')
-hemisphere_links = hemi_soup.find_all('h3')
+hemisphere_soup = soup(html, 'html.parser')
+hemisphere_links = hemisphere_soup.find_all('h3')
 # hemi_links
 # loop through each hemisphere link
 for hemispheres in hemisphere_links:
