@@ -25,7 +25,7 @@ def scrape_all():
 
     executable_path = {'executable_path': ChromeDriverManager().install()}
     # Initiate headless driver for deployment
-    browser = Browser('chrome', **executable_path, headless=False)
+    browser = Browser('chrome', **executable_path, headless=True)
     news_title, news_paragraph = mars_news(browser)
     # Run all scraping functions and store results in a dictionary
     data = {
